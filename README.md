@@ -1,4 +1,6 @@
-# Path Settings ![Path Settings Icon](https://github.com/tbremer/vscode-path-settings/raw/main/icon.png)
+![Path Settings Icon](https://github.com/tbremer/vscode-path-settings/raw/main/icon.png)
+
+# Path Settings
 
 Path Settings allows you to have specific VSCode settings that only affect certain paths. Ideal for monorepos.
 
