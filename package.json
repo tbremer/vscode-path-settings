@@ -1,6 +1,6 @@
 {
 	"name": "path-settings",
-	"displayName": "path-settings",
+	"displayName": "Path Settings",
 	"description": "Ensure unique settings for specific files.",
 	"version": "1.0.0",
 	"engines": {
@@ -11,6 +11,7 @@
 	],
 	"main": "./out/extension.js",
 	"publisher": "tbremer",
+	"icon": "https://github.com/tbremer/vscode-path-settings/raw/main/icon.png",
 	"activationEvents": [
 		"onStartupFinished"
 	],

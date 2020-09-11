@@ -4,6 +4,11 @@ import {
 	workspace
 } from 'vscode';
 
+interface Rule {
+	path: string;
+	settings: object;
+}
+
 let prevSettings = {};
 
 function handleActiveTextEditor(editor: TextEditor | undefined) {
@@ -12,7 +17,7 @@ function handleActiveTextEditor(editor: TextEditor | undefined) {
 	// remove previous settings
 	setConfiguration(prevSettings, true);
 
-	const userRules = workspace.getConfiguration('pathSettings').get<Array<{path: string, settings: object}>>('rules');
+	const userRules = workspace.getConfiguration('pathSettings').get<Array<Rule>>('rules');
 	if (userRules === undefined) { return; }
 	
 	for (const {path, settings} of userRules) {
