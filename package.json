@@ -2,7 +2,7 @@
 	"name": "path-settings",
 	"displayName": "Path Settings",
 	"description": "Ensure unique settings for specific files.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"engines": {
 		"vscode": "^1.48.0"
 	},
