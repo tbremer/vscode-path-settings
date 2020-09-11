@@ -1,0 +1,65 @@
+{
+	"name": "path-settings",
+	"displayName": "path-settings",
+	"description": "Ensure unique settings for specific files.",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./out/extension.js",
+	"publisher": "tbremer",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"configuration": {
+			"title": "Path Settings Rules",
+			"properties": {
+				"pathSettings.rules": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"path": {
+								"type": "string",
+								"description": "Glob pattern to match against file"
+							},
+							"settings": {
+								"type": "object",
+								"description": "Settings to be configured/updated"
+							}
+						}
+					},
+					"default": [],
+					"description": "Rules objects with known keys \"path\" and \"settings\""
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"@types/vscode": "^1.48.0",
+		"@typescript-eslint/eslint-plugin": "^3.8.0",
+		"@typescript-eslint/parser": "^3.8.0",
+		"eslint": "^7.6.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vsce": "^1.79.5",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {}
+}
